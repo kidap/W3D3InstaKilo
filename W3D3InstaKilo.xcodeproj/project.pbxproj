@@ -14,8 +14,10 @@
 		A71AE5221CA2E43E009B4733 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A71AE5211CA2E43E009B4733 /* Assets.xcassets */; };
 		A71AE5251CA2E43E009B4733 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A71AE5231CA2E43E009B4733 /* LaunchScreen.storyboard */; };
 		A71AE55D1CA2FC85009B4733 /* ImageCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A71AE55C1CA2FC85009B4733 /* ImageCollectionViewCell.m */; };
-		A71AE5601CA301D8009B4733 /* CollectionReusableView.m in Sources */ = {isa = PBXBuildFile; fileRef = A71AE55F1CA301D8009B4733 /* CollectionReusableView.m */; };
+		A71AE5601CA301D8009B4733 /* HeaderCollectionReusableView.m in Sources */ = {isa = PBXBuildFile; fileRef = A71AE55F1CA301D8009B4733 /* HeaderCollectionReusableView.m */; };
 		A71AE5631CA314C9009B4733 /* MyImage.m in Sources */ = {isa = PBXBuildFile; fileRef = A71AE5621CA314C9009B4733 /* MyImage.m */; };
+		A71AE5661CA336B6009B4733 /* CustomCollectionViewFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = A71AE5651CA336B6009B4733 /* CustomCollectionViewFlowLayout.m */; };
+		A71AE5691CA342B0009B4733 /* DecorationCollectionReusableView.m in Sources */ = {isa = PBXBuildFile; fileRef = A71AE5681CA342B0009B4733 /* DecorationCollectionReusableView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,10 +33,14 @@
 		A71AE5261CA2E43E009B4733 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A71AE55B1CA2FC85009B4733 /* ImageCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageCollectionViewCell.h; sourceTree = "<group>"; };
 		A71AE55C1CA2FC85009B4733 /* ImageCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageCollectionViewCell.m; sourceTree = "<group>"; };
-		A71AE55E1CA301D8009B4733 /* CollectionReusableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionReusableView.h; sourceTree = "<group>"; };
-		A71AE55F1CA301D8009B4733 /* CollectionReusableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionReusableView.m; sourceTree = "<group>"; };
+		A71AE55E1CA301D8009B4733 /* HeaderCollectionReusableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeaderCollectionReusableView.h; sourceTree = "<group>"; };
+		A71AE55F1CA301D8009B4733 /* HeaderCollectionReusableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeaderCollectionReusableView.m; sourceTree = "<group>"; };
 		A71AE5611CA314C9009B4733 /* MyImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyImage.h; sourceTree = "<group>"; };
 		A71AE5621CA314C9009B4733 /* MyImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyImage.m; sourceTree = "<group>"; };
+		A71AE5641CA336B6009B4733 /* CustomCollectionViewFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCollectionViewFlowLayout.h; sourceTree = "<group>"; };
+		A71AE5651CA336B6009B4733 /* CustomCollectionViewFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomCollectionViewFlowLayout.m; sourceTree = "<group>"; };
+		A71AE5671CA342B0009B4733 /* DecorationCollectionReusableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DecorationCollectionReusableView.h; sourceTree = "<group>"; };
+		A71AE5681CA342B0009B4733 /* DecorationCollectionReusableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DecorationCollectionReusableView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,19 +75,16 @@
 			children = (
 				A71AE5181CA2E43E009B4733 /* AppDelegate.h */,
 				A71AE5191CA2E43E009B4733 /* AppDelegate.m */,
-				A71AE51B1CA2E43E009B4733 /* ViewController.h */,
-				A71AE51C1CA2E43E009B4733 /* ViewController.m */,
+				A71AE56A1CA34EBE009B4733 /* View Controllers */,
+				A71AE56B1CA34ED6009B4733 /* ReusableView */,
+				A71AE56C1CA34EE2009B4733 /* ViewCell */,
+				A71AE56D1CA34F06009B4733 /* ViewLayout */,
+				A71AE56E1CA34F21009B4733 /* Model */,
 				A71AE51E1CA2E43E009B4733 /* Main.storyboard */,
 				A71AE5211CA2E43E009B4733 /* Assets.xcassets */,
 				A71AE5231CA2E43E009B4733 /* LaunchScreen.storyboard */,
 				A71AE5261CA2E43E009B4733 /* Info.plist */,
 				A71AE5151CA2E43E009B4733 /* Supporting Files */,
-				A71AE55B1CA2FC85009B4733 /* ImageCollectionViewCell.h */,
-				A71AE55C1CA2FC85009B4733 /* ImageCollectionViewCell.m */,
-				A71AE55E1CA301D8009B4733 /* CollectionReusableView.h */,
-				A71AE55F1CA301D8009B4733 /* CollectionReusableView.m */,
-				A71AE5611CA314C9009B4733 /* MyImage.h */,
-				A71AE5621CA314C9009B4733 /* MyImage.m */,
 			);
 			path = W3D3InstaKilo;
 			sourceTree = "<group>";
@@ -92,6 +95,53 @@
 				A71AE5161CA2E43E009B4733 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A71AE56A1CA34EBE009B4733 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				A71AE51B1CA2E43E009B4733 /* ViewController.h */,
+				A71AE51C1CA2E43E009B4733 /* ViewController.m */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		A71AE56B1CA34ED6009B4733 /* ReusableView */ = {
+			isa = PBXGroup;
+			children = (
+				A71AE55E1CA301D8009B4733 /* HeaderCollectionReusableView.h */,
+				A71AE55F1CA301D8009B4733 /* HeaderCollectionReusableView.m */,
+				A71AE5671CA342B0009B4733 /* DecorationCollectionReusableView.h */,
+				A71AE5681CA342B0009B4733 /* DecorationCollectionReusableView.m */,
+			);
+			name = ReusableView;
+			sourceTree = "<group>";
+		};
+		A71AE56C1CA34EE2009B4733 /* ViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				A71AE55B1CA2FC85009B4733 /* ImageCollectionViewCell.h */,
+				A71AE55C1CA2FC85009B4733 /* ImageCollectionViewCell.m */,
+			);
+			name = ViewCell;
+			sourceTree = "<group>";
+		};
+		A71AE56D1CA34F06009B4733 /* ViewLayout */ = {
+			isa = PBXGroup;
+			children = (
+				A71AE5641CA336B6009B4733 /* CustomCollectionViewFlowLayout.h */,
+				A71AE5651CA336B6009B4733 /* CustomCollectionViewFlowLayout.m */,
+			);
+			name = ViewLayout;
+			sourceTree = "<group>";
+		};
+		A71AE56E1CA34F21009B4733 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A71AE5611CA314C9009B4733 /* MyImage.h */,
+				A71AE5621CA314C9009B4733 /* MyImage.m */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -166,11 +216,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				A71AE51D1CA2E43E009B4733 /* ViewController.m in Sources */,
-				A71AE5601CA301D8009B4733 /* CollectionReusableView.m in Sources */,
+				A71AE5601CA301D8009B4733 /* HeaderCollectionReusableView.m in Sources */,
 				A71AE51A1CA2E43E009B4733 /* AppDelegate.m in Sources */,
+				A71AE5691CA342B0009B4733 /* DecorationCollectionReusableView.m in Sources */,
 				A71AE5631CA314C9009B4733 /* MyImage.m in Sources */,
 				A71AE55D1CA2FC85009B4733 /* ImageCollectionViewCell.m in Sources */,
 				A71AE5171CA2E43E009B4733 /* main.m in Sources */,
+				A71AE5661CA336B6009B4733 /* CustomCollectionViewFlowLayout.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

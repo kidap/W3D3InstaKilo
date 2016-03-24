@@ -6,8 +6,8 @@
 //  Copyright © 2016 AccessIT. All rights reserved.
 //
 
-#import "CollectionReusableView.h"
+#import "HeaderCollectionReusableView.h"
 
-@implementation CollectionReusableView
+@implementation HeaderCollectionReusableView
 
 @end

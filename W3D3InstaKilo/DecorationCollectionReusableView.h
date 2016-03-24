@@ -1,5 +1,5 @@
 //
-//  CollectionReusableView.h
+//  DecorationCollectionReusableView.h
 //  W3D3InstaKilo
 //
 //  Created by Karlo Pagtakhan on 03/23/2016.
@@ -8,7 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CollectionReusableView : UICollectionReusableView
-@property (strong, nonatomic) IBOutlet UILabel *headerLabel;
+@interface DecorationCollectionReusableView : UICollectionReusableView
 
 @end
