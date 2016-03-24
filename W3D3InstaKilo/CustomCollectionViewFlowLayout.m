@@ -7,8 +7,6 @@
 //
 
 #import "CustomCollectionViewFlowLayout.h"
-#import "DecorationCollectionReusableView.h"
-#import "HeaderCollectionReusableView.h"
 
 @interface CustomCollectionViewFlowLayout()
 
@@ -20,14 +18,13 @@
 -(instancetype)init{
   self = [super init];
   if (self) {
-    self.itemSize = CGSizeMake(150, 150);
+    self.itemSize = CGSizeMake(100, 100);
     self.minimumLineSpacing = 10;
     self.minimumInteritemSpacing = 10;
     self.sectionInset = UIEdgeInsetsMake(10, 10, 10, 10);
     self.headerReferenceSize = CGSizeMake(self.collectionView.contentSize.width, 40);
     
-//    [self registerClass:[DecorationCollectionReusableView class]
-//                                    forDecorationViewOfKind:@"decoration"];
+//    [self registerClass:[DecorationCollectionReusableView class] forDecorationViewOfKind:@"decoration"];
   }
   return self;
 }
@@ -54,7 +51,6 @@
   
   if([self.deletedArray containsObject:itemIndexPath]){
     attribute.center = CGPointMake(CGRectGetMidX(self.collectionView.bounds), CGRectGetMaxY(self.collectionView.bounds)+CGRectGetMaxY(attribute.frame));
-    
     NSLog(@"finalLayoutAttributes - Item:%ld, Section:%ld", itemIndexPath.item, itemIndexPath.section);
   }
   
@@ -80,8 +76,8 @@
   UICollectionViewLayoutAttributes *attribute = [super layoutAttributesForItemAtIndexPath:indexPath];
   CGFloat degrees;
   int randomNum = arc4random_uniform(10);
-  degrees = (randomNum * M_PI) /180.0;
   
+  degrees = (randomNum * M_PI) /180.0;
   attribute.transform = CGAffineTransformMakeRotation(degrees);
   
   return attribute;

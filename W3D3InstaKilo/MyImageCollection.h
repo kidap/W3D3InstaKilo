@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "UIKit/UIKit.h"
 
 @interface MyImageCollection : NSObject
 @property (strong, nonatomic) NSMutableArray *imageArray;
@@ -14,5 +15,6 @@
 @property (assign, nonatomic) NSInteger groupingSelected;
 
 //-(void)setSegment:(NSInteger)segment;
+-(void)addImage:(UIImage *)newImage;
 -(void)deleteImage:(NSIndexPath *)indexPath;
 @end

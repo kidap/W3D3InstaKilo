@@ -40,6 +40,9 @@
                                                     [[MyImage alloc] initWithImage:[UIImage imageNamed:@"dog5"] withLocation:@"1" withGroup:@"2"],
                                                     [[MyImage alloc] initWithImage:[UIImage imageNamed:@"dog6"] withLocation:@"1" withGroup:@"2"] ]];
 }
+-(void)addImage:(UIImage *)newImage{
+//handle later
+}
 -(void)deleteImage:(NSIndexPath *)indexPath{
   NSMutableArray *section = (NSMutableArray *)self.imageArray[indexPath.section];
   [section removeObjectAtIndex:indexPath.item];
@@ -62,7 +65,7 @@
   }
 }
 -(void)dataByLocation{
-  
+  //Refresh image array when grouping is selected
   self.imageArray = [[NSMutableArray alloc] init];
   
   NSMutableArray *tmp = [[NSMutableArray alloc] init];
@@ -80,6 +83,7 @@
   [self.imageArray addObject:tmp2];
 }
 -(void)dataByGroup{
+  //Refresh image array when grouping is selected
   self.imageArray = [[NSMutableArray alloc] init];
   
   NSMutableArray *tmp = [[NSMutableArray alloc] init];

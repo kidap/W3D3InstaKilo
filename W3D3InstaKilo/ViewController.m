@@ -23,7 +23,7 @@
 @property (strong, nonatomic) PileCollectionViewFlowLayout *layout2;
 @property (strong, nonatomic) UISegmentedControl *groupingSegmentedControl;
 @property (strong, nonatomic) UISegmentedControl *changeLayoutSegmentedControl;
-@property (strong, nonatomic) NSSet *allObjects;
+//@property (strong, nonatomic) NSSet *allObjects;
 @property (strong, nonatomic) MyImageCollection *imageCollection;
 @end
 
@@ -62,7 +62,8 @@
 }
 -(void)changeGrouping:(id)sender{
   NSLog(@"Change layout");
-  [self rebuildDataSource];
+  self.imageCollection.groupingSelected = self.groupingSegmentedControl.selectedSegmentIndex;
+  
   [self.collectionView reloadData];
   
 }
@@ -72,23 +73,21 @@
   self.layout1 = [[CustomCollectionViewFlowLayout alloc] init];
   self.layout2 = [[PileCollectionViewFlowLayout alloc] init];
   [self.collectionView setCollectionViewLayout:self.layout1 animated:YES completion:nil];
-  //  [self.collectionView reloadData];
 }
 -(void)prepareGestures{
+  //Delete item
   UITapGestureRecognizer *doubleTapToDelete = [[UITapGestureRecognizer alloc] initWithTarget:self
                                                                                       action:@selector(doubleTapToDelete:)];
   doubleTapToDelete.numberOfTapsRequired = 2;
   [self.collectionView addGestureRecognizer:doubleTapToDelete];
   
+  //Change layout
   UIPinchGestureRecognizer *pinchGesture = [[UIPinchGestureRecognizer alloc] initWithTarget:self action:@selector(pinchGesture:)];
   [self.collectionView addGestureRecognizer:pinchGesture];
   
-  
+  //Move item
   UILongPressGestureRecognizer *longPressGesture = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(longPressGesture:)];
   [self.collectionView addGestureRecognizer:longPressGesture];
-}
--(void)rebuildDataSource{
-  self.imageCollection.groupingSelected = self.groupingSegmentedControl.selectedSegmentIndex;
 }
 
 //MARK: Collection View datasouce and delegate
@@ -110,12 +109,12 @@
 -(UICollectionReusableView *)collectionView:(UICollectionView *)collectionView
           viewForSupplementaryElementOfKind:(NSString *)kind
                                 atIndexPath:(NSIndexPath *)indexPath{
-  
+  //Set Header Text
   if ([kind isEqualToString:UICollectionElementKindSectionHeader]) {
     HeaderCollectionReusableView *header = [collectionView dequeueReusableSupplementaryViewOfKind:kind
                                                                               withReuseIdentifier:@"Header"
                                                                                      forIndexPath:indexPath];
-    [self.imageCollection.imageArrayHeader[self.groupingSegmentedControl.selectedSegmentIndex] objectAtIndex:self.imageCollection.groupingSelected];
+    header.headerLabel = [self.imageCollection.imageArrayHeader[self.groupingSegmentedControl.selectedSegmentIndex] objectAtIndex:self.imageCollection.groupingSelected];
   }
   return nil;
 }
@@ -152,8 +151,8 @@
   switch (recognizer.state) {
     case UIGestureRecognizerStateBegan:{
       
-      NSIndexPath *indexPathSelection = [self.collectionView indexPathForItemAtPoint:[recognizer locationInView:self.collectionView]];
-      
+      //NSIndexPath *indexPathSelection = [self.collectionView indexPathForItemAtPoint:[recognizer locationInView:self.collectionView]];
+      //handle gesture
       NSLog(@"Long pressed");
       break;
     }
@@ -177,21 +176,9 @@
       break;
   }
 }
-//MARK: Helper methods
--(void)addAllObjectsToSet{
-  self.allObjects = [[NSSet alloc] initWithArray:@[ [[MyImage alloc] initWithImage:[UIImage imageNamed:@"fin"] withLocation:@"1" withGroup:@"1"],
-                                                    [[MyImage alloc] initWithImage:[UIImage imageNamed:@"hansolo"] withLocation:@"2" withGroup:@"1"],
-                                                    [[MyImage alloc] initWithImage:[UIImage imageNamed:@"kyloren"] withLocation:@"1" withGroup:@"1"],
-                                                    [[MyImage alloc] initWithImage:[UIImage imageNamed:@"leia"] withLocation:@"1" withGroup:@"1"],
-                                                    [[MyImage alloc] initWithImage:[UIImage imageNamed:@"luke"] withLocation:@"2" withGroup:@"1"],
-                                                    [[MyImage alloc] initWithImage:[UIImage imageNamed:@"poe"] withLocation:@"1" withGroup:@"1"],
-                                                    [[MyImage alloc] initWithImage:[UIImage imageNamed:@"rey"] withLocation:@"2" withGroup:@"1"],
-                                                    [[MyImage alloc] initWithImage:[UIImage imageNamed:@"dog1"] withLocation:@"1" withGroup:@"2"],
-                                                    [[MyImage alloc] initWithImage:[UIImage imageNamed:@"dog2"] withLocation:@"2" withGroup:@"2"],
-                                                    [[MyImage alloc] initWithImage:[UIImage imageNamed:@"dog3"] withLocation:@"1" withGroup:@"2"],
-                                                    [[MyImage alloc] initWithImage:[UIImage imageNamed:@"dog4"] withLocation:@"2" withGroup:@"2"],
-                                                    [[MyImage alloc] initWithImage:[UIImage imageNamed:@"dog5"] withLocation:@"1" withGroup:@"2"],
-                                                    [[MyImage alloc] initWithImage:[UIImage imageNamed:@"dog6"] withLocation:@"1" withGroup:@"2"] ]];
+//MARK: Data source methods
+-(void)addObjectToDataSource:(UIImage *)newImage{
+  [self.imageCollection addImage:newImage];
 }
 -(void)deleteObjectFromDataSource:(NSIndexPath *)indexPath{
   [self.imageCollection deleteImage:indexPath];
