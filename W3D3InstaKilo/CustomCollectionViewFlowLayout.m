@@ -20,7 +20,7 @@
 -(instancetype)init{
   self = [super init];
   if (self) {
-    self.itemSize = CGSizeMake(75, 75);
+    self.itemSize = CGSizeMake(150, 150);
     self.minimumLineSpacing = 10;
     self.minimumInteritemSpacing = 10;
     self.sectionInset = UIEdgeInsetsMake(10, 10, 10, 10);
@@ -62,6 +62,9 @@
 }
 
 //Implement the two methods below to change the attributes of the cells
+//----------------------------------------------------------
+//Investigate why header missing after this was implemented
+//----------------------------------------------------------
 - (NSArray<UICollectionViewLayoutAttributes *> *)layoutAttributesForElementsInRect:(CGRect)rect{
   NSMutableArray* attributes = [[NSMutableArray alloc] init];
   //Get all the attributes of the all objects
@@ -83,7 +86,5 @@
   
   return attribute;
 }
-
-
 
 @end

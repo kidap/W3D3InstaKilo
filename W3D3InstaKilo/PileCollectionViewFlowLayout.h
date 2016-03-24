@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PileUICollectionViewFlowLayout : UICollectionViewFlowLayout
+@interface PileCollectionViewFlowLayout : UICollectionViewFlowLayout
+
+@property (nonatomic, assign) CGFloat pinchScale;
+@property (nonatomic, assign) CGFloat pinchCentre;
 
 @end

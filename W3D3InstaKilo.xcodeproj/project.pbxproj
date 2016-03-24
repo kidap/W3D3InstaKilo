@@ -18,6 +18,8 @@
 		A71AE5631CA314C9009B4733 /* MyImage.m in Sources */ = {isa = PBXBuildFile; fileRef = A71AE5621CA314C9009B4733 /* MyImage.m */; };
 		A71AE5661CA336B6009B4733 /* CustomCollectionViewFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = A71AE5651CA336B6009B4733 /* CustomCollectionViewFlowLayout.m */; };
 		A71AE5691CA342B0009B4733 /* DecorationCollectionReusableView.m in Sources */ = {isa = PBXBuildFile; fileRef = A71AE5681CA342B0009B4733 /* DecorationCollectionReusableView.m */; };
+		A71AE5741CA3A1FA009B4733 /* PileCollectionViewFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = A71AE5731CA3A1FA009B4733 /* PileCollectionViewFlowLayout.m */; };
+		A766331D1CA4330000B531E9 /* MyImageCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = A766331C1CA4330000B531E9 /* MyImageCollection.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +43,10 @@
 		A71AE5651CA336B6009B4733 /* CustomCollectionViewFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomCollectionViewFlowLayout.m; sourceTree = "<group>"; };
 		A71AE5671CA342B0009B4733 /* DecorationCollectionReusableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DecorationCollectionReusableView.h; sourceTree = "<group>"; };
 		A71AE5681CA342B0009B4733 /* DecorationCollectionReusableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DecorationCollectionReusableView.m; sourceTree = "<group>"; };
+		A71AE5721CA3A1FA009B4733 /* PileCollectionViewFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PileCollectionViewFlowLayout.h; sourceTree = "<group>"; };
+		A71AE5731CA3A1FA009B4733 /* PileCollectionViewFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PileCollectionViewFlowLayout.m; sourceTree = "<group>"; };
+		A766331B1CA4330000B531E9 /* MyImageCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyImageCollection.h; sourceTree = "<group>"; };
+		A766331C1CA4330000B531E9 /* MyImageCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyImageCollection.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,8 +83,8 @@
 				A71AE5191CA2E43E009B4733 /* AppDelegate.m */,
 				A71AE56A1CA34EBE009B4733 /* View Controllers */,
 				A71AE56B1CA34ED6009B4733 /* ReusableView */,
-				A71AE56C1CA34EE2009B4733 /* ViewCell */,
 				A71AE56D1CA34F06009B4733 /* ViewLayout */,
+				A71AE56C1CA34EE2009B4733 /* ViewCell */,
 				A71AE56E1CA34F21009B4733 /* Model */,
 				A71AE51E1CA2E43E009B4733 /* Main.storyboard */,
 				A71AE5211CA2E43E009B4733 /* Assets.xcassets */,
@@ -131,6 +137,8 @@
 			children = (
 				A71AE5641CA336B6009B4733 /* CustomCollectionViewFlowLayout.h */,
 				A71AE5651CA336B6009B4733 /* CustomCollectionViewFlowLayout.m */,
+				A71AE5721CA3A1FA009B4733 /* PileCollectionViewFlowLayout.h */,
+				A71AE5731CA3A1FA009B4733 /* PileCollectionViewFlowLayout.m */,
 			);
 			name = ViewLayout;
 			sourceTree = "<group>";
@@ -138,6 +146,8 @@
 		A71AE56E1CA34F21009B4733 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				A766331B1CA4330000B531E9 /* MyImageCollection.h */,
+				A766331C1CA4330000B531E9 /* MyImageCollection.m */,
 				A71AE5611CA314C9009B4733 /* MyImage.h */,
 				A71AE5621CA314C9009B4733 /* MyImage.m */,
 			);
@@ -217,10 +227,12 @@
 			files = (
 				A71AE51D1CA2E43E009B4733 /* ViewController.m in Sources */,
 				A71AE5601CA301D8009B4733 /* HeaderCollectionReusableView.m in Sources */,
+				A71AE5741CA3A1FA009B4733 /* PileCollectionViewFlowLayout.m in Sources */,
 				A71AE51A1CA2E43E009B4733 /* AppDelegate.m in Sources */,
 				A71AE5691CA342B0009B4733 /* DecorationCollectionReusableView.m in Sources */,
 				A71AE5631CA314C9009B4733 /* MyImage.m in Sources */,
 				A71AE55D1CA2FC85009B4733 /* ImageCollectionViewCell.m in Sources */,
+				A766331D1CA4330000B531E9 /* MyImageCollection.m in Sources */,
 				A71AE5171CA2E43E009B4733 /* main.m in Sources */,
 				A71AE5661CA336B6009B4733 /* CustomCollectionViewFlowLayout.m in Sources */,
 			);
